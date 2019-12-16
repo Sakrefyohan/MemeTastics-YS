@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity
     String[] _tagKeys, _tagValues;
     private int _currentMainMode = 0;
     private long _lastInfoBarTextShownAt = 0;
-
+    private static final String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -199,6 +199,7 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("ConstantConditions")
     private void selectTab(int pos, int mainMode) {
+        Log.d(TAG, "selectTab() called with: pos = [" + pos + "], mainMode = [" + mainMode + "]");
         MenuItem navItem = null;
         switch (mainMode) {
             case 0:

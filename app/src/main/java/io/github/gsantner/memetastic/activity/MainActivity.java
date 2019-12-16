@@ -30,6 +30,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -126,6 +127,9 @@ public class MainActivity extends AppCompatActivity
         // Bind UI
         app = (App) getApplication();
         ButterKnife.bind(this);
+
+        Log.d("MainActivity","Test error");
+        Log.e("MainActivity","Fake Error");
 
         // Setup _toolbar
         setSupportActionBar(_toolbar);
